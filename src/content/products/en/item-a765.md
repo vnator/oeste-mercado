@@ -1,13 +1,13 @@
 ---
 title: "SF-AB A765"
-description: "Assorted Screw Set" 
+description: "Pitanga" 
 main:
   id: 2
   content: |
     Introducing the SF-AB A765 Assorted Screw Set – the ultimate solution for your screw fastening needs. This comprehensive set includes a wide variety of screws meticulously curated to tackle various projects with ease and precision.
   imgCard: "@/images/product-image-2.avif"
   imgMain: "@/images/product-image-main-2.avif"
-  imgAlt: "Mockup boxes of assorted screw set"
+  imgAlt: "Unidade Pitanga"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"

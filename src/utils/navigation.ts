@@ -1,28 +1,27 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
-  { name: "Contact", url: "/contact" },
+  { name: "Promoções", url: "/services" },
+  { name: "Insitucional", url: "/products" },
+  { name: "Noticias", url: "/blog" },
+  { name: "Contato", url: "/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Navegação",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Home", url: "/" },
+      { name: "Promoções", url: "/services" },
+      { name: "Conheça nossa historia", url: "/products" },
     ],
   },
   {
-    section: "Company",
+    section: "Super Oeste",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
+      { name: "Contatos", url: "#" },
+      { name: "Noticias", url: "/blog" },
+      { name: "Vagas", url: "#" },
     ],
   },
 ];

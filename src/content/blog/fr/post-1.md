@@ -1,7 +1,7 @@
 ---
 title: "Optimisation de l'efficacité avec les outils de pointe de ScrewFast"
 description: "Innovation de l'efficacité de la construction avec des outils de précision et un soutien."
-author: "Jacob"
+author: "Elisa mais sarna que um enchame de mosquito"
 authorImage: "@/images/blog/jacob.avif"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-02-06
