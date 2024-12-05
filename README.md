@@ -1,14 +1,14 @@
 # Versatile Landing, Blog & Docs Template for a Simplified Web Presence
 
-![ScrewFast](https://github.com/mearashadowfax/ScrewFast/assets/125820963/cdf299bd-414a-4a2d-baf0-d188bb4709c7)
+![OesteSupermercados](https://github.com/mearashadowfax/OesteSupermercados/assets/125820963/cdf299bd-414a-4a2d-baf0-d188bb4709c7)
 
-ScrewFast is an **open-source template** designed for quick and efficient web project setup, blending **minimalism with functionality**. Whether you're showcasing a portfolio, launching a company landing page, or running a blog, ScrewFast provides everything you need. By combining the power of the [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and [Preline UI](https://preline.co/), this template offers a functional and aesthetically pleasing solution for your web presence.
+OesteSupermercados is an **open-source template** designed for quick and efficient web project setup, blending **minimalism with functionality**. Whether you're showcasing a portfolio, launching a company landing page, or running a blog, OesteSupermercados provides everything you need. By combining the power of the [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and [Preline UI](https://preline.co/), this template offers a functional and aesthetically pleasing solution for your web presence.
 
-**[View Live Demo](https://screwfast.uk)**
+**[View Live Demo](https://supermercadooeste.com.br)**
 
 ## Table of Contents
 
-* [Why Choose ScrewFast?](#why-choose-screwfast)
+* [Why Choose OesteSupermercados?](#why-choose-OesteSupermercados)
 * [What's New](#whats-new)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
@@ -51,7 +51,7 @@ ScrewFast is an **open-source template** designed for quick and efficient web pr
 * [Contributing](#contributing)
 * [License](#license)
 
-## Why Choose ScrewFast?
+## Why Choose OesteSupermercados?
 
 * **Efficient Architecture:** Deploy faster with a template that's simple to set up and navigate.
 * **Optimized for Small Projects:** Perfect for crisp, professional web personas without excess complexity.
@@ -96,14 +96,14 @@ ScrewFast is an **open-source template** designed for quick and efficient web pr
 
 * [x] **Internationalization (i18n) Features**:
   * Integrates [Astro's i18n features](https://docs.astro.build/en/guides/internationalization/) and includes a custom `LanguagePicker` component.
-  * Developers can access the monolingual version directly from [`monolingual-site` branch](https://github.com/mearashadowfax/ScrewFast/tree/monolingual-site).
+  * Developers can access the monolingual version directly from [`monolingual-site` branch](https://github.com/mearashadowfax/OesteSupermercados/tree/monolingual-site).
 
 * [x] **Dynamic Table of Contents (ToC) with Scroll Progress Indicator**:
   * Highlights the relevant section in the ToC with a scroll progress indicator. 
   * Developers seeking alternatives might consider the [remark-toc](https://github.com/remarkjs/remark-toc) plugin.
 
 > [!NOTE]
-> Currently, there are no planned improvements or known bugs. If you encounter any issues, please report them on our [issues page](https://github.com/mearashadowfax/ScrewFast/issues) or [start a discussion](https://github.com/mearashadowfax/ScrewFast/discussions/new/choose) to share ideas, suggestions, or ask questions.
+> Currently, there are no planned improvements or known bugs. If you encounter any issues, please report them on our [issues page](https://github.com/mearashadowfax/OesteSupermercados/issues) or [start a discussion](https://github.com/mearashadowfax/OesteSupermercados/discussions/new/choose) to share ideas, suggestions, or ask questions.
   
 ## Getting Started
 
@@ -156,17 +156,17 @@ This creates a `dist/` directory with your built site (configurable via [outDir 
 
 Click the button below to start deploying your project on Vercel:  
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmearashadowfax%2FScrewFast)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmearashadowfax%2FOesteSupermercados)
 
 ### Deploying to Netlify
 
 Click the button below to start deploying your project on Netlify:  
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mearashadowfax/ScrewFast)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mearashadowfax/OesteSupermercados)
 
 ## Project Structure
 
-ScrewFast organizes modular components, content, and layouts to streamline development and content management.
+OesteSupermercados organizes modular components, content, and layouts to streamline development and content management.
 
 ```md
 
@@ -216,7 +216,7 @@ public/
 
 ## Customization
 
-ScrewFast allows for easy customization to suit your specific needs. Here are a couple of ways you can configure components and content:
+OesteSupermercados allows for easy customization to suit your specific needs. Here are a couple of ways you can configure components and content:
 
 ### Editing Component Variables
 
@@ -226,7 +226,7 @@ Some components have properties defined as TypeScript variables within the compo
 // Define the string variables title and subTitle for the main heading and sub-heading text.
 const title: string = "Meeting Industry Demands";
 const subTitle: string =
-  "At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors.";
+  "At OesteSupermercados, we tackle the unique challenges encountered in the hardware and construction sectors.";
 ```
 
 For collections of content like testimonials or statistics, edit the corresponding array of objects:
@@ -334,14 +334,14 @@ We have two options for the navigation bar components: `Navbar.astro` for a regu
 
 The `Navbar.astro` and `NavbarMegaMenu.astro` components can be configured within `MainLayout.astro`, allowing you to choose the style of navigation that best suits your project. To customize these components, you can modify them directly under `src/components/sections/navbar&footer` to apply specific configurations or design updates.
 
-![ScrewFast MegaMenu](https://github.com/user-attachments/assets/690482af-f1a4-4ebf-be58-eca0b5862973)
+![OesteSupermercados MegaMenu](https://github.com/user-attachments/assets/690482af-f1a4-4ebf-be58-eca0b5862973)
 
 
 ## Integrations and Enhancements
 
 ### Starlight Documentation
 
-ScrewFast is now equipped with Starlight, designed to elevate the user experience with documentation. This modern and elegant theme includes a suite of features to make content more accessible and enjoyable to navigate.
+OesteSupermercados is now equipped with Starlight, designed to elevate the user experience with documentation. This modern and elegant theme includes a suite of features to make content more accessible and enjoyable to navigate.
 
 Key Features:
 
@@ -448,7 +448,7 @@ Additionally, update the `<html>` tag to remove the `scrollbar-hide` class, resu
 
 ### SEO Configuration
 
-The SEO Configuration in the ScrewFast template is designed to empower users in optimizing their website's visibility on search engines and social media platforms. This documentation outlines the implementation details and usage instructions for effectively managing SEO settings.
+The SEO Configuration in the OesteSupermercados template is designed to empower users in optimizing their website's visibility on search engines and social media platforms. This documentation outlines the implementation details and usage instructions for effectively managing SEO settings.
 
 #### Using constants.ts
 
@@ -460,7 +460,7 @@ To customize SEO settings, modify the values in the `constants.ts` file. Key con
 // constants.ts
 
 export const SITE = {
-  title: "ScrewFast",
+  title: "OesteSupermercados",
   // Other SITE properties...
 };
 
@@ -520,15 +520,15 @@ For a more robust SEO strategy, you can create additional properties in the `Met
 
 #### Structured Data and Rich Snippets
 
-Structured data in JSON-LD format can be managed by the `Meta.astro` component, improving how search engines understand your page content and potentially enhancing search results with rich snippets. Modify the `structuredData` property with relevant [schema.org](https://schema.org) types and properties:
+Structured data in JSON-LD format can be managed by the `Meta.astro` component, improving how search engines understand your page content and potentially enhancing search results with rich snippets. Modify the `structuredData` property with relevant [schema.org](https://supermercadooeste.com.br) types and properties:
 
 ```astro
 <MainLayout
   structuredData={{
-    "@context": "https://schema.org",
+    "@context": "https://supermercadooeste.com.br",
     "@type": "WebSite",
-    "name": "ScrewFast",
-    "url": "https://screwfast.uk",
+    "name": "OesteSupermercados",
+    "url": "https://supermercadooeste.com.br",
     "description": "Discover top-quality hardware tools and services"
   }}
 >
@@ -688,6 +688,6 @@ If you're interested in helping, you can contribute in several ways:
 
 ## License
 
-This project is released under the MIT License. Please read the [LICENSE](https://github.com/mearashadowfax/ScrewFast/blob/main/LICENSE) file for more details.
+This project is released under the MIT License. Please read the [LICENSE](https://github.com/mearashadowfax/OesteSupermercados/blob/main/LICENSE) file for more details.
 
 **Note:** This website template has no affiliation with the companies displayed. Logos are used for demonstration purposes only and should be replaced in customized versions.

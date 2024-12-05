@@ -1,0 +1,196 @@
+---
+// Import necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import MainSection from "@components/ui/blocks/MainSection.astro";
+import MainSectionRight from "@components/ui/blocks/MainSectionRight.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Services | ${SITE.title}`;
+
+const produtos = [
+  // Variados
+  { categoria: 'Variados', imagem: '/path/to/image1.jpg', titulo: 'Panela de Pressão Rochedo', precoOriginal: 'R$ 100,00', precoPromocional: 'R$ 80,00' },
+  { categoria: 'Variados', imagem: '/path/to/image2.jpg', titulo: 'Aspirador de Pó Philco', precoOriginal: 'R$ 150,00', precoPromocional: 'R$ 120,00' },
+  { categoria: 'Variados', imagem: '/path/to/image3.jpg', titulo: 'Liquidificador Mondial', precoOriginal: 'R$ 200,00', precoPromocional: 'R$ 160,00' },
+  { categoria: 'Variados', imagem: '/path/to/image4.jpg', titulo: 'Chaleira Elétrica Cadence', precoOriginal: 'R$ 250,00', precoPromocional: 'R$ 200,00' },
+  { categoria: 'Variados', imagem: '/path/to/image5.jpg', titulo: 'Jogo de Talheres Tramontina', precoOriginal: 'R$ 300,00', precoPromocional: 'R$ 240,00' },
+  { categoria: 'Variados', imagem: '/path/to/image6.jpg', titulo: 'Ferro de Passar Arno', precoOriginal: 'R$ 350,00', precoPromocional: 'R$ 280,00' },
+  { categoria: 'Variados', imagem: '/path/to/image7.jpg', titulo: 'Batedeira Britânia', precoOriginal: 'R$ 400,00', precoPromocional: 'R$ 320,00' },
+  { categoria: 'Variados', imagem: '/path/to/image8.jpg', titulo: 'Ventilador Mondial', precoOriginal: 'R$ 450,00', precoPromocional: 'R$ 360,00' },
+  // Horti Fruti
+  { categoria: 'Horti Fruti', imagem: '/path/to/image9.jpg', titulo: 'Maçã Gala (1kg)', precoOriginal: 'R$ 10,00', precoPromocional: 'R$ 8,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image10.jpg', titulo: 'Banana Prata (1kg)', precoOriginal: 'R$ 20,00', precoPromocional: 'R$ 15,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image11.jpg', titulo: 'Batata Inglesa (1kg)', precoOriginal: 'R$ 30,00', precoPromocional: 'R$ 24,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image12.jpg', titulo: 'Cenoura (1kg)', precoOriginal: 'R$ 40,00', precoPromocional: 'R$ 32,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image13.jpg', titulo: 'Tomate Italiano (1kg)', precoOriginal: 'R$ 50,00', precoPromocional: 'R$ 40,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image14.jpg', titulo: 'Alface Crespa (unidade)', precoOriginal: 'R$ 60,00', precoPromocional: 'R$ 48,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image15.jpg', titulo: 'Pimentão Verde (1kg)', precoOriginal: 'R$ 70,00', precoPromocional: 'R$ 56,00' },
+  { categoria: 'Horti Fruti', imagem: '/path/to/image16.jpg', titulo: 'Cebola Roxa (1kg)', precoOriginal: 'R$ 80,00', precoPromocional: 'R$ 64,00' },
+  // Açougue
+  { categoria: 'Açougue', imagem: '/path/to/image17.jpg', titulo: 'Picanha Maturada (1kg)', precoOriginal: 'R$ 50,00', precoPromocional: 'R$ 40,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image18.jpg', titulo: 'Alcatra Bovina (1kg)', precoOriginal: 'R$ 70,00', precoPromocional: 'R$ 60,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image19.jpg', titulo: 'Filé de Frango (1kg)', precoOriginal: 'R$ 90,00', precoPromocional: 'R$ 72,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image20.jpg', titulo: 'Linguiça Toscana (1kg)', precoOriginal: 'R$ 110,00', precoPromocional: 'R$ 88,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image21.jpg', titulo: 'Costela Bovina (1kg)', precoOriginal: 'R$ 130,00', precoPromocional: 'R$ 104,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image22.jpg', titulo: 'Carne Moída de Primeira (1kg)', precoOriginal: 'R$ 150,00', precoPromocional: 'R$ 120,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image23.jpg', titulo: 'Coxa e Sobrecoxa (1kg)', precoOriginal: 'R$ 170,00', precoPromocional: 'R$ 136,00' },
+  { categoria: 'Açougue', imagem: '/path/to/image24.jpg', titulo: 'Lombo Suíno (1kg)', precoOriginal: 'R$ 190,00', precoPromocional: 'R$ 152,00' },
+  // Higiene
+  { categoria: 'Higiene', imagem: '/path/to/image25.jpg', titulo: 'Sabonete Dove (unidade)', precoOriginal: 'R$ 30,00', precoPromocional: 'R$ 25,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image26.jpg', titulo: 'Shampoo Pantene (400ml)', precoOriginal: 'R$ 40,00', precoPromocional: 'R$ 35,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image27.jpg', titulo: 'Creme Dental Colgate (90g)', precoOriginal: 'R$ 50,00', precoPromocional: 'R$ 45,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image28.jpg', titulo: 'Fralda Pampers RN (pacote)', precoOriginal: 'R$ 60,00', precoPromocional: 'R$ 55,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image29.jpg', titulo: 'Lenço Umedecido Huggies', precoOriginal: 'R$ 70,00', precoPromocional: 'R$ 65,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image30.jpg', titulo: 'Escova de Dentes Oral-B', precoOriginal: 'R$ 80,00', precoPromocional: 'R$ 75,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image31.jpg', titulo: 'Desodorante Rexona Aerosol', precoOriginal: 'R$ 90,00', precoPromocional: 'R$ 85,00' },
+  { categoria: 'Higiene', imagem: '/path/to/image32.jpg', titulo: 'Fio Dental Johnson’s', precoOriginal: 'R$ 100,00', precoPromocional: 'R$ 95,00' },
+];
+
+---
+
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://supermercadooeste.com.br",
+    "@type": "WebPage",
+    "@id": "https://supermercadooeste.com.br/services",
+    "url": "https://supermercadooeste.com.br/services",
+    "name": "Expert Consultation Services | OesteSupermercados",
+    "description": "Uniting expertise with your vision, OesteSupermercados provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://supermercadooeste.com.br",
+        "name": "OesteSupermercados",
+        "description": "OesteSupermercados offers top-tier hardware tools and expert construction services to meet all your project needs."
+    },
+    "inLanguage": "en-US"
+  }}
+>
+  <h1 class="title">Promoções unidade Santa Maria do Oeste</h1>
+    
+  <div class="container">
+    <div class="categoria">
+      <h2>Variados</h2>
+      <div class="grid">
+        {produtos.filter(produto => produto.categoria === 'Variados').slice(0, 8).map(produto => (
+            <div class="produto">
+              <svg id="icon-images" viewBox="0 0 36 32" class="icon">
+                <path d="M34 4h-2v-2c0-1.1-0.9-2-2-2h-28c-1.1 0-2 0.9-2 2v24c0 1.1 0.9 2 2 2h2v2c0 1.1 0.9 2 2 2h28c1.1 0 2-0.9 2-2v-24c0-1.1-0.9-2-2-2zM4 6v20h-1.996c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v1.996h-24c-1.1 0-2 0.9-2 2v0zM34 29.996c-0.001 0.001-0.002 0.003-0.004 0.004h-27.993c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v23.993z"></path>
+                <path d="M30 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+                <path d="M32 28h-24v-4l7-12 8 10h2l7-6z"></path>
+              </svg>
+              <h3>{produto.titulo}</h3>
+              <p class="preco-original">{produto.precoOriginal}</p>
+              <p class="preco-promocional">{produto.precoPromocional}</p>
+            </div>
+        ))}
+      </div>
+    </div>
+    <div class="categoria">
+      <h2>Horti Fruti</h2>
+      <div class="grid">
+        {produtos.filter(produto => produto.categoria === 'Horti Fruti').slice(0, 8).map(produto => (
+            <div class="produto">
+              <svg id="icon-images" viewBox="0 0 36 32" class="icon">
+                <path d="M34 4h-2v-2c0-1.1-0.9-2-2-2h-28c-1.1 0-2 0.9-2 2v24c0 1.1 0.9 2 2 2h2v2c0 1.1 0.9 2 2 2h28c1.1 0 2-0.9 2-2v-24c0-1.1-0.9-2-2-2zM4 6v20h-1.996c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v1.996h-24c-1.1 0-2 0.9-2 2v0zM34 29.996c-0.001 0.001-0.002 0.003-0.004 0.004h-27.993c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v23.993z"></path>
+                <path d="M30 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+                <path d="M32 28h-24v-4l7-12 8 10h2l7-6z"></path>
+              </svg>
+              <h3>{produto.titulo}</h3>
+              <p class="preco-original">{produto.precoOriginal}</p>
+              <p class="preco-promocional">{produto.precoPromocional}</p>
+            </div>
+        ))}
+      </div>
+    </div>
+    <div class="categoria">
+      <h2>Açougue</h2>
+      <div class="grid">
+        {produtos.filter(produto => produto.categoria === 'Açougue').slice(0, 8).map(produto => (
+            <div class="produto">
+              <svg id="icon-images" viewBox="0 0 36 32" class="icon">
+                <path d="M34 4h-2v-2c0-1.1-0.9-2-2-2h-28c-1.1 0-2 0.9-2 2v24c0 1.1 0.9 2 2 2h2v2c0 1.1 0.9 2 2 2h28c1.1 0 2-0.9 2-2v-24c0-1.1-0.9-2-2-2zM4 6v20h-1.996c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v1.996h-24c-1.1 0-2 0.9-2 2v0zM34 29.996c-0.001 0.001-0.002 0.003-0.004 0.004h-27.993c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v23.993z"></path>
+                <path d="M30 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+                <path d="M32 28h-24v-4l7-12 8 10h2l7-6z"></path>
+              </svg>
+              <h3>{produto.titulo}</h3>
+              <p class="preco-original">{produto.precoOriginal}</p>
+              <p class="preco-promocional">{produto.precoPromocional}</p>
+            </div>
+        ))}
+      </div>
+    </div>
+    <div class="categoria">
+      <h2>Higiene</h2>
+      <div class="grid">
+        {produtos.filter(produto => produto.categoria === 'Higiene').slice(0, 8).map(produto => (
+            <div class="produto">
+              <svg id="icon-images" viewBox="0 0 36 32" class="icon">
+                <path d="M34 4h-2v-2c0-1.1-0.9-2-2-2h-28c-1.1 0-2 0.9-2 2v24c0 1.1 0.9 2 2 2h2v2c0 1.1 0.9 2 2 2h28c1.1 0 2-0.9 2-2v-24c0-1.1-0.9-2-2-2zM4 6v20h-1.996c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v1.996h-24c-1.1 0-2 0.9-2 2v0zM34 29.996c-0.001 0.001-0.002 0.003-0.004 0.004h-27.993c-0.001-0.001-0.003-0.002-0.004-0.004v-23.993c0.001-0.001 0.002-0.003 0.004-0.004h27.993c0.001 0.001 0.003 0.002 0.004 0.004v23.993z"></path>
+                <path d="M30 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+                <path d="M32 28h-24v-4l7-12 8 10h2l7-6z"></path>
+              </svg>
+              <h3>{produto.titulo}</h3>
+              <p class="preco-original">{produto.precoOriginal}</p>
+              <p class="preco-promocional">{produto.precoPromocional}</p>
+            </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .container {
+    margin-top: 60px;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: center;
+  }
+  
+  .categoria {
+    margin-bottom: 32px;
+  }
+
+
+  .categoria h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .grid {    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .produto {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .icon {
+    max-width: 180px;
+    height: auto;
+  }
+  .produto h3 {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  .preco-original {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .preco-promocional {
+    color: red;
+    font-weight: bold;
+  }
+</style>

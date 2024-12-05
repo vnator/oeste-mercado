@@ -3,11 +3,10 @@
 import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
 import enStrings from "@utils/navigation.ts";
-import frStrings from "@utils/fr/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
 
 // Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
+const strings = enStrings;
 const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 ---
 

@@ -13,7 +13,7 @@ export const SEO = {
   title: SITE.title,
   description: SITE.description,
   structuredData: {
-    "@context": "https://schema.org",
+    "@context": "https://supermercadooeste.com.br",
     "@type": "WebPage",
     inLanguage: "en-US",
     "@id": SITE.url,
